@@ -21,7 +21,7 @@ fun HomeScreen() {
     val context = LocalContext.current
     val contentResolver = context.contentResolver
     var bookmarks by remember { mutableStateOf<List<String>>(emptyList()) }
-    val uri = Uri.parse("content://com.survivalcoding.gangnam2kriandroidstudy.provider/bookmarks")
+    val uri = Uri.parse("content://com.survivalcoding.gangnam2kiandroidstudy.provider/bookmarks")
 
     LaunchedEffect(key1 = uri) {
         try {
