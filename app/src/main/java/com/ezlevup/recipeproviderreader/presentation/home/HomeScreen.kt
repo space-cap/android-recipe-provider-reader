@@ -25,12 +25,12 @@ fun HomeScreen() {
 
     LaunchedEffect(key1 = uri) {
         try {
-            val cursor = contentResolver.query(uri, arrayOf("title"), null, null, null)
+            val cursor = contentResolver.query(uri, arrayOf("recipeId"), null, null, null)
             val newBookmarks = mutableListOf<String>()
             cursor?.use {
                 while (it.moveToNext()) {
-                    val title = it.getString(it.getColumnIndex("title"))
-                    newBookmarks.add(title)
+                    val recipeId = it.getString(it.getColumnIndex("recipeId"))
+                    newBookmarks.add(recipeId)
                 }
             }
             bookmarks = newBookmarks
