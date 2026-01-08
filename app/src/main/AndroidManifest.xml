@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="com.survivalcoding.gangnam2kiandroidstudy.provider.READ_DATA" />
+    <uses-permission android:name="com.survivalcoding.gangnam2kriandroidstudy.provider.READ_DATA" />
 
+    <queries>
+        <provider android:authorities="com.survivalcoding.gangnam2kriandroidstudy.provider" />
+    </queries>
 
     <application
         android:allowBackup="true"
